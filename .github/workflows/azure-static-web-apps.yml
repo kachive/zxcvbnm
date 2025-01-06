@@ -23,11 +23,9 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "." # 改为当前目录
-          api_location: "" # 不使用 API
-          output_location: "" # 不需要构建输出
-          skip_app_build: true # 跳过构建步骤
-          is_static_export: true # 标记为静态导出
+          app_location: "." # 使用当前目录
+          skip_app_build: true # 跳过构建
+          skip_deploy_on_missing_secrets: true # 添加这行
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
