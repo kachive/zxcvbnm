@@ -3,6 +3,9 @@
 ## プロジェクト概要
 シンプルな静的ウェブサイトのテストプロジェクトです。Azure DevOps で管理・デプロイされています。
 
+## デプロイURL
+[プロジェクトサイト](https://witty-desert-085c36410.4.azurestaticapps.net)
+
 ## 技術スタック
 - HTML5
 - Azure Static Web Apps
@@ -35,4 +38,4 @@ git push origin main
 
 ## メモ
 - mainブランチへのプッシュで自動デプロイされます
-- Azure Static Web Apps でホスティングされています
+- Azure Static Web Apps でホスティング: witty-desert-085c36410.4.azurestaticapps.net
