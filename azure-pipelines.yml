@@ -1,1 +1,31 @@
- 
+trigger:
+  - dev
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: AzureStaticWebApp@0
+  inputs:
+    app_location: '/'
+    api_location: ''
+    output_location: ''
+    azure_static_web_apps_api_token: '15d4e55caf3c6d9ed61b1fcd40804f40001f496c052e45b3d24b161c9ffe082f04-8446c886-85e1-486d-9019-1f6c5acc43ff0102908085c36410'
+    deployment_environment: 'production'
+    production_branch: 'dev'
+    skip_app_build: true
+    verbose: true
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(build.sourcesDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'drop'
+    publishLocation: 'Container' 

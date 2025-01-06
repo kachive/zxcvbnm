@@ -17,7 +17,7 @@
 - `azure-pipelines.yml`: Azure DevOps パイプライン設定
 
 ## デプロイ状況
-[![Build Status](https://dev.azure.com/ntysbzgx/test/_apis/build/status/test?branchName=main)](https://dev.azure.com/ntysbzgx/test/_build/latest?definitionId=1&branchName=main)
+[![Build Status](https://dev.azure.com/ntysbzgx/test/_apis/build/status/test?branchName=dev)](https://dev.azure.com/ntysbzgx/test/_build/latest?definitionId=1&branchName=dev)
 
 ## 開発手順
 1. リポジトリのクローン:
@@ -33,9 +33,9 @@ git clone https://ntysbzgx@dev.azure.com/ntysbzgx/test/_git/test
 ```bash
 git add .
 git commit -m "変更内容"
-git push origin main
+git push origin dev
 ```
 
 ## メモ
-- mainブランチへのプッシュで自動デプロイされます
+- devブランチへのプッシュで自動デプロイされます
 - Azure Static Web Apps でホスティング: witty-desert-085c36410.4.azurestaticapps.net
