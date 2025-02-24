@@ -1,10 +1,11 @@
 # シンプルプロジェクト
 
 ## 概要
-シンプルな静的ウェブサイトです。
+React + TypeScript で作られた静的ウェブサイトです。
 
 ## 技術スタック
-- HTML/CSS
+- React
+- TypeScript
 - Azure Static Web Apps
 - GitHub Actions
 
