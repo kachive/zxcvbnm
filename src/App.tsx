@@ -1,14 +1,8 @@
-import { FC } from 'react'
-import { Box } from './components/Box'
+import React from 'react';
+import { NoticeBoard } from './components/NoticeBoard';
 
-const App: FC = () => {
-  return (
-    <Box 
-      title="テスト"
-      content="テストページです。"
-      year="2025"
-    />
-  )
-}
+const App: React.FC = () => {
+  return <NoticeBoard />;
+};
 
-export default App 
+export default App; 
