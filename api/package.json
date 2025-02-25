@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "func start"
+    "start": "node server.js"
   },
   "dependencies": {
-    "@azure/cosmos": "^4.2.0",
-    "express": "^4.21.2",
+    "@azure/cosmos": "^3.17.3",
+    "express": "^4.17.1",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.3"
   }
 } 

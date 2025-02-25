@@ -97,11 +97,12 @@ app.delete('/api/notices/:id', async (req, res) => {
   }
 });
 
-// 本地开发需要这个
+// 本地开发使用
 if (process.env.NODE_ENV !== 'production') {
     app.listen(3001, () => {
         console.log('Server running on port 3001');
     });
 }
 
+// Azure Functions 使用
 module.exports = app; 
