@@ -97,7 +97,11 @@ app.delete('/api/notices/:id', async (req, res) => {
   }
 });
 
-const PORT = 3001;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-}); 
+// 本地开发需要这个
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(3001, () => {
+        console.log('Server running on port 3001');
+    });
+}
+
+module.exports = app; 
