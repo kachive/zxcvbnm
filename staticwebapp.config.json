@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {
+      "route": "/api/*",
+      "serve": "/api/server.js"
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  }
+} 
