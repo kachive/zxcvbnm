@@ -1,7 +1,11 @@
 const express = require('express');
 const cors = require('cors');
 const { CosmosClient } = require('@azure/cosmos');
-require('dotenv').config({ path: '../.env' });
+
+// 根据环境加载配置
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config({ path: '../.env' });
+}
 
 const app = express();
 
