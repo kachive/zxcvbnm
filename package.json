@@ -2,8 +2,13 @@
   "name": "test",
   "version": "1.0.0",
   "dependencies": {
+    "@azure/cosmos": "^4.2.0",
+    "@types/react-icons": "^2.2.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
     "styled-components": "^6.1.15"
   },
   "devDependencies": {
@@ -16,6 +21,7 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@types/styled-components": "^5.1.34",
+    "concurrently": "^8.2.2",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5"
   },
@@ -23,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm start\""
   },
   "browserslist": {
     "production": [
